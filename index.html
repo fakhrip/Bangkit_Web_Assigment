@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta stuff -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking stuff -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Raleway:wght@300;500;800&family=RocknRoll+One&display=swap" rel="stylesheet"> 
+
+    <title>Muhammad Fakhri Putra Supriyadi</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        
+        border-width: 5px;
+        border-style: solid;
+        border-color: #22262A;
+
+        background-color: #FEDA15;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        margin-bottom: 4vw;
+        margin-right: 50px;
+        margin-left: 50px;
+
+        position: sticky;
+        top: 0px;
+
+        border-style: solid;
+        border-color: #22262A;
+        border-radius: 5px;
+        border-width: 7px;
+
+        background-color: #BFD0DA;
+
+        transition-duration: .5s;
+        transition-property: all;
+        transition-timing-function: ease-out;
+    }
+
+    header.full {
+        margin-right: 0px;
+        margin-left: 0px;
+        
+        border-radius: 0px;
+        border-width: 0px;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+
+        transition-duration: .5s;
+        transition-property: all;
+        transition-timing-function: ease-out;
+    }
+
+    header > h1 {
+        display: flex;
+        flex: 1;
+        color: #22262A;
+        margin-right: 15px;
+        white-space: pre;
+        margin-left: 20px;
+
+        font-size: 4vw;
+        font-weight: bolder;
+        font-family: 'RocknRoll One', sans-serif;
+
+        transition-duration: .5s;
+        transition-property: all;
+        transition-timing-function: ease-out;
+    }
+
+    header > nav {
+        display: flex;
+        width: 300px;
+        flex-direction: column;
+    }
+
+    header > nav > .flex-col {
+        display: flex;
+        flex: 1;
+    }
+
+    header > nav > .flex-col > a {
+        height: 100%;
+        width: 50%;
+        color: #BFD0DA;
+        line-height: 85px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #22262A;
+
+        cursor: pointer;
+        
+        font-size: 1.7vw;
+        font-weight: 1000;
+        font-family: 'DotGothic16', sans-serif;
+    }
+
+    main {
+        display: flex;
+        margin-right: 50px;
+        margin-left: 50px;
+        line-height: 2vw;
+        overflow-wrap: break-word;
+
+        font-size: 1.5vw;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    aside > img {
+        object-fit: cover;
+        max-height: 300px;
+        background-color: #22262A;
+
+        border-style: solid;
+        border-color: #a7900f;
+        border-radius: 5px;
+        border-width: 7px;   
+    }
+
+    aside > div {
+        color: #BFD0DA;
+        padding: 15px;
+        background-color: #22262A;
+
+        border-style: solid;
+        border-color: #a7900f;
+        border-radius: 5px;
+        border-width: 7px;
+    }
+
+    aside > div > span {
+        font-weight: 1000;
+        font-family: 'DotGothic16', sans-serif;
+    }
+
+    article:not(:first-child) {
+        margin-top: 4vw;
+    }
+
+    article ul {
+        margin-left: 0px;
+        padding-left: 4vw;
+    }
+
+    article ul > li {
+        margin-bottom: 1vw;
+    }
+
+    article ul > li > span {
+        font-weight: 900;
+    }
+
+    article ul > li:not(:first-child) {
+        margin-top: 2vw;
+    }
+
+    aside > div:not(:first-child) {
+        margin-top: 2vw;
+    }
+
+    article > section {
+        margin-bottom: 10px;
+        padding-left: 50px;
+        font-size: 2vw;
+        font-weight: 900;
+    }
+
+    article > div {
+        padding-left: 50px;
+        max-width: 550px;
+    }
+
+    footer {
+        display: flex;
+        padding: 15px;
+        padding-right: 50px;
+        padding-left: 50px;
+        color: #BFD0DA;
+        margin-top: 50px;
+        background-color: #22262A;
+        justify-content: space-between;
+        
+        font-weight: lighter;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    /* for 900px and smaller */
+    @media screen and (max-width: 900px) {
+        header {
+            flex-direction: column;
+        }
+     
+        header > nav {
+            width: 100%;
+            height: 50px;
+            flex-direction: row;
+        }
+
+        header > nav > .flex-col > a { 
+            line-height: 55px;
+        }
+     
+        article:first-child {
+            margin-top: 4vw;
+        }
+    }
+
+    /* for 500px and smaller */
+    @media screen and (max-width: 500px) {
+        main {
+            flex-direction: column;
+        }
+
+        aside {
+            width: 100%;
+        }
+
+        aside > img {
+            max-height: 200px;
+            object-position: 0 40%;   
+        }
+
+        article > section {
+            padding-left: 0px;
+        }
+
+        article > div {
+            padding-left: 0px;
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <!-- Kepala -->
+    <header>
+        <!-- Mata -->
+        <h1>print(f"{'Holá'[::3]}l
+        {'Holá'[2:0:-1]}")</h1>
+
+        <!-- Mulut -->
+        <nav>
+            <div class="flex-col">
+                <a onclick='return scrollToElement("tentang")'>About Me</a>
+                <a onclick='return scrollToElement("pengalaman")'>Experiences</a>
+            </div>
+            <div class="flex-col">
+                <a onclick='return scrollToElement("projects")'>Projects</a>
+                <a onclick='return scrollToElement("lainlain")'>Others</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Badan -->
+    <main>
+        <!-- Tangan -->
+        <aside>
+            <img src="me.jpg" alt="me">
+
+            <div>
+                <span>Handle(s)</span> <br>
+                <hr>
+                > FAI <br>
+                > f4r4w4y <br>
+                > triple_4 <br>
+                > Muhammad Fakhri Putra Supriyadi 
+            </div>
+
+            <div>
+                <span>Organization(s)</span> <br>
+                <hr>
+                > Daskom Laboratory <br>
+                > 4word Research Group <br>
+                > (mendung)10^6 CTF Team <br>
+            </div>
+
+            <div>
+                <span>Tech Stack(s) & Tool(s)</span> <br>
+                <hr>
+                > Git <br>
+                > Vue <br>
+                > PHP <br>
+                > FPGA <br>
+                > C/C++ <br>
+                > Linux <br>
+                > Latex <br>
+                > Python <br>
+                > Hasura <br>
+                > Flutter <br>
+                > Laravel <br>
+                > Firebase <br>
+                > Javascript <br>
+                > Tailwind CSS <br>
+                > System Verilog <br>
+                > Microcontroller <br>
+                > Native Android (Java) <br>
+            </div>
+        </aside>
+
+        <!-- Isi Badan (asupan gizi :v) -->
+        <div id="content">
+            <article id="tentang">
+                <section>About Me</section>
+
+                <div>
+                    Have you ever think about a very good application idea that might be usefull for everyone but couldn't make it happen ? 
+                    <br><br>
+
+                    Have you ever created an application but don't know how to secure it ? 
+                    <br><br>
+
+                    Or have you ever wonder how to create such a hardware that could be connected to other stuff ? 
+                    <br><br>
+                    
+                    Thats what i do, my main profession is <b>Software Engineering</b>, but i also could do stuff about <b>Cyber Security</b>, <b>Embedded System</b>, and <b>Network Engineering/Cloud Native</b>.
+                </div>
+            </article>
+
+            <article id="pengalaman">
+                <section>Experiences</section>
+
+                <div>
+                    Here i have listed my job experiences that i have done throughout my career :
+
+                    <ul>
+                        <li>
+                            Software Developer Intern at
+                            <span>
+                                PT. Sagara Asia Teknologi
+                            </span> 
+                            (Jun 2020 - Jul 2020)
+                        </li> 
+
+                        Created automation using Wordpress API to upload post extracted from .csv file. 
+                        <br> <br>
+                        
+                        Worked together in a team to create a website for an interior architectural company (BYO Living).
+                        <br> <br>
+                        
+                        Contributed to creating frontend (using Quasar Framework) and also a little amount of backend (using Laravel) for BYO Living website.
+
+                        <li>
+                            Software Developer Intern at
+                            <span>
+                                PT. Telkom Karawang
+                            </span> 
+                            (Jun 2019 – Jul 2019)
+                        </li> 
+
+                        Worked with software development team to create internal tools that will be use for many purposethroughout the whole system, such as marketing and engineering.
+                        <br> <br>
+                        
+                        Created a dashboard provisioning website to ease the manager to provision the system load withinany range of time.
+                        <br> <br>
+                        
+                        Created UNSC (prospective customers that have not installed Indihome network service) tracker toease the marketing department for looking at which location have the most opportunity to install Indihome network service.
+
+                        <li>
+                            Junior Android Developer Intern at
+                            <span>
+                                PT. Aegis Ultima Teknologi
+                            </span> 
+                            (Jun 2016 – Sep 2016)
+                        </li> 
+
+                        Worked together in a team of three people to create an android application to fulfill final assignment for the intern.
+                        <br> <br>
+                        
+                        Created an android application called Remindra, its an application that mainly to make some reminder for shalat (Islam Prayer), but also can find some places nearby such as police station, hospital, etc usingGoogle Maps API and also can recognize the user activity based on Google Awareness API and theInternal Sensors of the device (Gyroscope and Accelerometer), this app is basically for learning all kindof APIs and implement it in such a way that it could be useful.
+
+                        <li>
+                            Network Technician Intern at
+                            <span>
+                                PT. PINS Indonesia
+                            </span> 
+                            (Mar 2016 - Apr 2016)
+                        </li> 
+
+                        Install router for network migration from XL to Telkomsel in some government office throughout Bandung.
+                    </ul>
+                </div>
+            </article>
+
+            <article id="projects">
+                <section>Projects</section>
+
+                <div>
+                    These are some of my projects that i have done ever since i started my interest in computer :
+
+                    <ul>
+                        <li>
+                            Speaker for
+                            <span>
+                                Weekend Crash Course
+                            </span>
+                            (Jun 2020 - Present)
+                        </li>
+
+                        Create slides for some of theWeekend Crash Courseheld at Daskom1337 discord.
+                        <br> <br>
+
+                        Manage the event together with another Community Mentor.
+                        <br> <br>
+
+                        Upload the videos toDaskom1337 Youtube Channel.
+
+                        <li>
+                            Lead Developer for
+                            <span>
+                                DaskomLab Web Application
+                            </span>
+                            (Jun 2019 – Apr 2020)
+                        </li>
+
+                        Create the software architecture for DaskomLab Web App, a web application created for Dasar Komputer Laboratory Practicum.
+                        <br> <br>
+
+                        Plan all development process and tech stack used for the project.
+                        <br> <br>
+
+                        Create the CI/CD based on Github Actions to automate deployment process.
+                        <br> <br>
+
+                        Manage remaining development from next generation of software developer in the lab.
+
+                        <li>
+                            Software Developer for
+                            <span>
+                                EEG Signal Processing
+                            </span>
+                            (Jul 2020 – Aug 2020)
+                        </li>
+
+                        Assist one of my friend research on EEG Signal Processing.
+                        <br> <br>
+
+                        Create the EEG Signal Processing Script.
+
+                        <li>
+                            Software Developer for
+                            <span>
+                                Survey App
+                            </span>
+                            (Feb 2020 – Mar 2020)
+                        </li>
+
+                        Client Project for Creating Survey with idea based on Google Form.
+                        <br> <br>
+
+                        Plan and Develop the SurveyApp Application.
+                    </ul>
+                </div>
+            </article>
+
+            <article id="lainlain">
+                <section>Others</section>
+
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius quam eu sapien convallis lacinia. Nam pharetra mollis congue. Vivamus ornare ultricies diam at maximus. Nam nunc nisi, viverra sed maximus ut, bibendum et enim. Mauris non risus quis mauris tempor volutpat. Mauris malesuada euismod metus et sagittis. Nullam pretium eleifend ornare. Curabitur placerat nibh turpis, in commodo lacus volutpat eget. Donec eu justo eget massa blandit maximus. Aenean viverra eu ante non ultrices.
+                    <br> <br>
+
+                    Fusce feugiat massa id iaculis ullamcorper. Fusce turpis diam, sollicitudin vel pellentesque in, varius sed nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi in ex nec diam aliquam posuere. Duis congue non nibh in posuere. Mauris dignissim pretium nisi, nec rhoncus felis tristique at. Donec nec ultricies nibh, luctus hendrerit nibh. Nam consectetur tortor tellus. Nullam rutrum blandit magna et dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br> <br>
+                    
+                    Nunc condimentum tellus fringilla est tempus molestie. Etiam consequat aliquam tellus eget luctus. Sed convallis nec ante quis ultrices. Praesent hendrerit, odio nec euismod pretium, urna ipsum accumsan risus, consectetur placerat tortor dolor ut sem. Suspendisse tempor purus sodales eros auctor scelerisque. Nullam vel purus sit amet quam condimentum cursus. In vitae commodo tortor. Aenean at felis sollicitudin, mollis arcu a, posuere lorem. Vivamus faucibus elit sit amet iaculis laoreet. Sed luctus tempor est, quis vehicula lacus feugiat quis. Nunc a pharetra est. 
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Kaki -->
+    <footer>
+        <!-- Kiri -->
+        <span>
+            Made with 🖐️ controlled with 🧠 by Fakhri a.k.a f4r4w4y 
+        </span>
+
+        <!-- Kanan -->
+        <span>
+            in a night @ 2021
+        </span>
+    </footer>
+
+    <script>
+
+        var thresh = 70;
+
+        window.addEventListener('scroll', function() {
+            if (pageYOffset > thresh && !document.getElementsByTagName("header")[0].classList.contains("full")) {
+                document.getElementsByTagName("header")[0].classList.add("full");
+            }
+            
+            if (pageYOffset <= thresh && document.getElementsByTagName("header")[0].classList.contains("full")) {
+                document.getElementsByTagName("header")[0].classList.remove("full");
+            }
+        });
+
+        function scrollToElement(el) {
+            var rect = document.getElementById(el).getBoundingClientRect();
+            window.scrollBy({
+                top: rect.top - 250,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

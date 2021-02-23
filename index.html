@@ -26,10 +26,10 @@
     header {
         display: flex;
         justify-content: space-between;
-        margin-top: 60px;
+        margin-top: 5.5vw;
         margin-bottom: 4vw;
-        margin-right: 50px;
-        margin-left: 50px;
+        margin-right: 5vw;
+        margin-left: 5vw;
 
         position: sticky;
         top: 0px;
@@ -37,7 +37,7 @@
         border-style: solid;
         border-color: #22262A;
         border-radius: 5px;
-        border-width: 7px;
+        border-width: .5vw;
 
         background-color: #BFD0DA;
 
@@ -106,8 +106,8 @@
 
     main {
         display: flex;
-        margin-right: 50px;
-        margin-left: 50px;
+        margin-right: 5vw;
+        margin-left: 5vw;
         line-height: 2vw;
         overflow-wrap: break-word;
 
@@ -129,7 +129,7 @@
         border-style: solid;
         border-color: #a7900f;
         border-radius: 5px;
-        border-width: 7px;   
+        border-width: .5vw;   
     }
 
     aside > div {
@@ -140,7 +140,7 @@
         border-style: solid;
         border-color: #a7900f;
         border-radius: 5px;
-        border-width: 7px;
+        border-width: .5vw;
     }
 
     aside > div > span {
@@ -175,26 +175,27 @@
 
     article > section {
         margin-bottom: 10px;
-        padding-left: 50px;
+        padding-left: 5vw;
         font-size: 2vw;
         font-weight: 900;
     }
 
     article > div {
-        padding-left: 50px;
+        padding-left: 5vw;
         max-width: 55vw;
     }
 
     footer {
         display: flex;
         padding: 15px;
-        padding-right: 50px;
-        padding-left: 50px;
+        padding-right: 5vw;
+        padding-left: 5vw;
         color: #BFD0DA;
-        margin-top: 50px;
+        margin-top: 20px;
         background-color: #22262A;
         justify-content: space-between;
         
+        font-size: 1.2vw;
         font-weight: lighter;
         font-family: 'Raleway', sans-serif;
     }
@@ -207,12 +208,12 @@
      
         header > nav {
             width: 100%;
-            height: 50px;
+            height: 4vw;
             flex-direction: row;
         }
 
         header > nav > .flex-col > a { 
-            line-height: 55px;
+            line-height: calc(10vw * 50/100);
         }
      
         article:first-child {
@@ -231,8 +232,7 @@
         }
 
         aside > img {
-            max-height: 200px;
-            object-position: 0 40%;   
+            max-height: 200px;  
         }
 
         article > section {
@@ -242,6 +242,7 @@
         article > div {
             padding-left: 0px;
             width: 100%;
+            max-width: none;
         }
     }
 </style>
